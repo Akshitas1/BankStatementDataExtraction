@@ -30,19 +30,6 @@ def clean_bank_name(bank_name_str):
     # Capitalize each word
     cleaned_name = cleaned_name.title()
     
-    # Common fixes for known issues
-    replacements = {
-        'Chases': 'Chase',
-        'Uppank': 'Upbank', 
-        'Pnc Access Checking Statement Pnc Bank': 'PNC Bank',  
-        'Wells Fargo Simple Business Checking': 'Wells Fargo'
-    }
-    
-    # Apply replacements
-    for old, new in replacements.items():
-        if old in cleaned_name:
-            cleaned_name = cleaned_name.replace(old, new)
-    
     return cleaned_name
 
 # Process each image in the folder
