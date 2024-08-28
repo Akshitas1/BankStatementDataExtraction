@@ -1,0 +1,79 @@
+[
+    {
+        "File Name": "ame.png",
+        "Bank Name": "American Express",
+        "Bank Address": [
+            "Box 30384 Salt Lake City, UT 86130-0384",
+            "Seat, WA 98101",
+            "Box 30384 Salt Lake City, UT 84130-0384"
+        ],
+        "Bank Contacts": [
+            "1-800-446-6307"
+        ],
+        "Account Number": "N/A"
+    },
+    {
+        "File Name": "citibank.jpg",
+        "Bank Name": "Citibank",
+        "Bank Address": [
+            "Service Center 014 PO Box 769013 San Antonio, TX 78245-9013"
+        ],
+        "Bank Contacts": [
+            "1-800-627-3999",
+            "1-800-274-6660",
+            "1-800-284-2992"
+        ],
+        "Account Number": "906655011"
+    },
+    {
+        "File Name": "JPMORGAN.jpg",
+        "Bank Name": "Chase",
+        "Bank Address": [
+            "Baton Rouge, LA 70828-0180"
+        ],
+        "Bank Contacts": [
+            "1-800-935-9935",
+            "1-800-242-7383",
+            "1-877-312-4273",
+            "1-713-262-1679"
+        ],
+        "Account Number": "000000797746625"
+    },
+    {
+        "File Name": "pncbank.png",
+        "Bank Name": "Pnc Bank",
+        "Bank Address": [
+            "on to Seattle, WA 98101",
+            "Customer Service PO Box 609 Pittsburgh, PA 15230-9738"
+        ],
+        "Bank Contacts": [
+            "1-800-531-1648"
+        ],
+        "Account Number": "123456789"
+    },
+    {
+        "File Name": "usbank.jpg",
+        "Bank Name": "Us Bank",
+        "Bank Address": [
+            "P.O. Box 1800 Saint Paul"
+        ],
+        "Bank Contacts": [
+            "1-800-872-2657"
+        ],
+        "Account Number": "157522319910"
+    },
+    {
+        "File Name": "wellsfargo.jpg",
+        "Bank Name": "Wells Fargo",
+        "Bank Address": [
+            "SEATTLE, WA 98101",
+            "P.O. Box 6995 Portland"
+        ],
+        "Bank Contacts": [
+            "1-800-225-5935",
+            "1-800-877-4833",
+            "1-877-337-7454"
+        ],
+        "Account Number": "123456789"
+    }
+]

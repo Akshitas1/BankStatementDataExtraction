@@ -2,7 +2,7 @@ import os
 import re
 import pytesseract
 from PIL import Image
-import pandas as pd
+import json
 
 # Directory containing images
 image_folder = 'data'
@@ -11,7 +11,7 @@ image_folder = 'data'
 phone_number_pattern = r'\b1[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b'
 account_number_pattern = r'\b(?:Account\s*(?:number|Number|No\.|[-\s]*)\s*:?\s*|Acct\s*[-\s]*)\d{1,4}(?:[-\s]?\d{1,4}){0,3}|\b\d{12,16}\b'
 address_pattern = r'(?:P\.?O\.? ?Box \d{1,5}[\w\s]*|\d{1,5}[\w\s]+,\s*[A-Z]{2} \d{5}(?:-\d{4})?)|(?:[\d\w\s]+,[\s]*[A-Z]{2}[\s]*\d{5}(?:-\d{4})?)'
-bank_names_pattern = r'\b(?:JPMorgan\s+Chase|Chase|Bank\s+of\s+America|BofA|Citibank|Citigroup|Wells\s+Fargo|Goldman\s+Sachs|Morgan\s+Stanley|U\.?S\.?\s+Bank|PNC\s+Financial\s+Services|Truist|Capital\s+One|HSBC|Barclays|American\s+Express)\b'
+bank_names_pattern = r'\b(?:JPMorgan\s+Chase|Chase|Bank\s+of\s+America|BofA|Citibank|Citigroup|Wells\s+Fargo|Goldman\s+Sachs|Morgan\s+Stanley|U\.?S\.?\s+Bank|PNC\s+Financial\s+Services|Truist|Capital\s+One|HSBC|Barclays|American\s+Express)|PNC\s+Bank\b'
 
 # Initialize list to store results
 results = []
@@ -79,11 +79,11 @@ for filename in os.listdir(image_folder):
             'Account Number': account_number,
         })
 
-# Convert results to DataFrame
-df = pd.DataFrame(results)
+# Convert results to JSON format
+json_results = json.dumps(results, indent=4)
 
-# Save results to CSV
-df.to_csv('extracted_data.csv', index=False)
+# Save results to JSON file
+with open('extracted_data.json', 'w') as json_file:
+    json_file.write(json_results)
 
-print("Data extraction completed and saved to extracted_data.csv")
-
+print("Data extraction completed and saved to extracted_data.json")
