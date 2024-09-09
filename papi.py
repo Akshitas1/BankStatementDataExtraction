@@ -48,7 +48,7 @@ def fetch_local_image(image_path: str) -> Image.Image:
 @app.post("/extract/")
 async def extract_data(
     image_url: Optional[str] = Query(None, description="URL of the image to process"),
-    type: str = Query("bank statement", description="Type of document")
+    type: str = Query("bankstatement", description="Type of document")
 ):
     """Extract data from an image URL."""
     if not image_url:
