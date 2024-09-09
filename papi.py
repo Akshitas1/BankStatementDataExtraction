@@ -55,7 +55,7 @@ async def extract_data(
         raise HTTPException(status_code=400, detail="Please provide an image URL.")
 
     if type.lower() != "bankstatement":
-        raise HTTPException(status_code=400, detail="Unsupported document type. Only 'bank statement' is supported.")
+        raise HTTPException(status_code=400, detail="Unsupported document type. Only 'bankstatement' is supported.")
 
     if image_url.startswith("http://localhost:8000/"):
         local_path = image_url.replace("http://localhost:8000/", "")
